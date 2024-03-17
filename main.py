@@ -12,7 +12,7 @@ def main():
     file_input_pandas = input.file_input_pandas('data/test_csv.csv')
     print(file_input_pandas)
 
-    output_text = console_input + file_input + file_input_pandas.to_string()
+    output_text = console_input + file_input + file_input_pandas.to_string(index=False)
     output.file_write('data/output.txt', output_text)
 
 if __name__ == '__main__':
