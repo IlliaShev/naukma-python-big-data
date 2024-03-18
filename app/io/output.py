@@ -1,3 +1,6 @@
+import pandas as pd
+
+
 def console_write(output):
     """
     This function writes output to the console
@@ -14,3 +17,12 @@ def file_write(path, output):
     """
     with open(path, 'w') as f:
         f.write(output)
+
+
+def file_write_pandas(path, df: pd.DataFrame):
+    """
+    This function writes csv data frame to the file
+    :param df: data frame
+    :param path: path to the file
+    """
+    df.to_csv(path)
